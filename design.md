@@ -1,7 +1,7 @@
 # Carambi Design Guide
 
-Version: 0.2
-Status: Typography selected; desktop browser calibration pending
+Version: 0.3
+Status: Desktop baseline accepted; mobile refinement in progress
 Updated: 2026-09-25
 
 ## 1. Purpose and identity
@@ -134,9 +134,7 @@ The olive should feel mature, quiet, and desaturated. It should not resemble bri
 
 For v1, use **one primary accent only**. Do not introduce a second accent merely for visual variety.
 
-Exact color values are **TBD** and should be calibrated in the browser during prototype work.
-
-Use the successful Phase 1 specimen palette as the Phase 2 starting point:
+The following palette is accepted for v1:
 
 ```text
 ivory      #f5f2e9
@@ -146,9 +144,7 @@ olive      #626949
 rule       #ccc9bd
 ```
 
-These are prototype values, not a finalized production palette.
-
-The target relationship is more important than any specific preliminary hex value.
+Keep these values during mobile refinement. Typography and spacing carry the editorial character without additional accent colors.
 
 ---
 
@@ -244,17 +240,9 @@ Whitespace is structural and intentional.
 
 Do not add decorative elements or copy merely to fill unused space.
 
-Exact values for:
+The accepted desktop maximum content width is **1180px**. This does not prescribe a mobile width.
 
-- maximum content width
-- gutters
-- column widths
-- gaps
-- section spacing
-- font sizes
-- line heights
-
-are **TBD** and must be calibrated through browser screenshots rather than inferred mechanically from generated concept images.
+Mobile gutters, type scale, line heights, and spacing rhythm should be calibrated through browser rendering rather than inferred mechanically from generated concept images.
 
 ---
 
@@ -273,13 +261,11 @@ Permitted devices include:
 
 The site should not become covered in editorial ornament.
 
-For desktop, the current preferred marginal motif is a single restrained:
+For desktop, the accepted marginal motif is a single restrained:
 
 **INDEX**
 
-device associated primarily with the Hero or main page grid.
-
-Its final position is **TBD**.
+device associated with the Hero. Its current left-side placement and treatment in the accepted browser implementation are the v1 desktop baseline. Hide it on mobile.
 
 Do not repeat marginal labels throughout every section.
 
@@ -300,18 +286,13 @@ The marginal device is an accent, not a second navigation system.
 
 ### 4.5 Materiality
 
-The background may have extremely subtle material warmth.
+The accepted v1 materiality is the current warm ivory background without a visibly perceptible paper texture. Typography and spacing carry the editorial character.
 
 Core rule:
 
 **The user should perceive warmth, not perceive “a paper texture.”**
 
-Acceptable:
-
-- warm ivory background
-- extremely subtle tonal variation
-- very low-opacity CSS or SVG micro-noise if it materially improves the result
-- a barely perceptible tonal field behind a lower section
+For v1, the warm ivory background is sufficient. Do not add further background effects during mobile refinement.
 
 Avoid:
 
@@ -471,7 +452,6 @@ The About section may receive:
 
 - slightly stronger spacing
 - a subtle column relationship
-- a very pale tonal background shift
 - one fine rule
 
 It must not become:
@@ -810,27 +790,11 @@ The specimen remains temporary and must not become part of the public site.
 
 ### Phase 2 — Desktop prototype
 
-Implement the approved design first at a desktop reference width around 1440 px.
-
-Calibrate:
-
-- content width
-- hero size
-- line breaks
-- serif weight
-- guide-row spacing
-- metadata alignment
-- rule contrast
-- olive intensity
-- background warmth
-- marginal INDEX placement
-- footer rhythm
-
-Use browser screenshots for comparison.
+Completed and accepted. The real browser implementation at approximately 1440 px is the v1 English desktop baseline for content width, Hero composition, guide rows, About, footer, palette, and INDEX treatment. Preserve it during mobile refinement.
 
 ### Phase 3 — Mobile
 
-Adapt the approved desktop system to approximately 390 px.
+In progress. Refine the approved desktop system for approximately 390 px.
 
 Do not merely compress the desktop grid.
 
@@ -859,21 +823,14 @@ Only after visual approval, finalize:
 
 ## 13. Current TBD items
 
-The following decisions intentionally remain open until real browser prototypes are reviewed:
+The remaining design decisions are:
 
-1. exact production palette values
-2. exact type scale
-3. exact line heights
-4. exact content width
-5. spacing scale
-6. breakpoint values
-7. final placement and treatment of the desktop INDEX marginal device
-8. background materiality strength
-9. production delivery strategy for the Chinese webfont
-
-Do not silently resolve these as permanent design decisions during the first implementation pass.
-
-Prototype them and make the differences visible for review.
+1. final mobile type scale
+2. final mobile line heights
+3. final mobile spacing rhythm
+4. responsive breakpoint calibration
+5. Chinese production typography calibration
+6. Chinese webfont delivery and subsetting
 
 ---
 
@@ -881,12 +838,12 @@ Prototype them and make the differences visible for review.
 
 The visual concept work has already converged.
 
-Use the left-hand **A concept** in `references/carambi-homepage-v3.png` as the primary visual reference for the Pure Refined Editorial direction.
+The accepted real browser implementation is the primary reference for exact English desktop composition. The left-hand **A concept** in `references/carambi-homepage-v3.png` remains design provenance for the Pure Refined Editorial direction.
 
 Use the neighboring concepts only selectively:
 
 - archival/marginal concept: reference for one restrained marginal vertical device
-- material concept: reference for extremely subtle background warmth and materiality
+- material concept: provenance for the restrained warmth now carried by the plain ivory background
 
 Do not copy invented text, fake metadata, decorative imagery, or incidental image-generation artifacts from any concept image.
 

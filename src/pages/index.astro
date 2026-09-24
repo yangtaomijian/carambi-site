@@ -1,25 +1,95 @@
+---
+import '@fontsource-variable/newsreader/standard.css';
+import '@fontsource-variable/source-sans-3/wght.css';
+import '../styles/home.css';
+
+const githubUrl = 'https://github.com/yangtaomijian';
+
+const guides = [
+  {
+    number: '01',
+    title: 'Demons Within',
+    description: 'Bilingual player guide',
+    coverage: 'Public 14.6',
+    href: 'https://yangtaomijian.github.io/demons-within-fvn-guide/en/',
+  },
+  {
+    number: '02',
+    title: 'Password',
+    description: 'Guide and reference archive',
+    coverage: 'Build 0.85',
+    href: 'https://yangtaomijian.github.io/password-fvn-guide/en/',
+  },
+] as const;
+---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Carambi — local prototype</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 3rem;
-        background: #f5f2e9;
-        color: #272822;
-        font: 1rem/1.5 system-ui, sans-serif;
-      }
-      a { color: #626949; }
-    </style>
+    <title>Carambi</title>
   </head>
   <body>
-    <main>
-      <h1>Carambi</h1>
-      <p>Local typography prototype.</p>
-      <p><a href="/specimen/type/">Open the temporary typography specimen</a></p>
-    </main>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/">Carambi</a>
+        <nav aria-label="Primary">
+          <a href="#guides">Guides</a>
+          <a href="#about">About</a>
+          <a href="/zh/" lang="zh-CN" class="zh-inline">中文</a>
+          <a href={githubUrl}>GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="index-marker" aria-hidden="true"><span>INDEX</span></div>
+          <div class="hero-copy">
+            <h1 id="hero-title">
+              <span>Guides and reference projects</span>
+              <span>for furry visual novels</span>
+              <span>and related games.</span>
+            </h1>
+            <p>Independent documentation and long-term reference work.</p>
+          </div>
+        </section>
+
+        <section class="guides-section" id="guides" aria-labelledby="guides-title">
+          <h2 class="section-label" id="guides-title">SELECTED GUIDES</h2>
+          <div class="guide-list">
+            {guides.map((guide) => (
+              <a class="guide-row" href={guide.href}>
+                <span class="guide-number">{guide.number}</span>
+                <span class="guide-main">
+                  <span class="guide-title">{guide.title}<span class="external-arrow" aria-hidden="true">↗</span></span>
+                  <span class="guide-description">{guide.description}</span>
+                </span>
+                <span class="guide-meta">
+                  <span>{guide.coverage}</span>
+                  <span><span class="zh-inline" lang="zh-CN">中文</span> · English</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="about-section" id="about" aria-labelledby="about-title">
+          <h2 id="about-title">About</h2>
+          <p>Carambi is the name I use for English-language projects. Also known as <span class="zh-inline" lang="zh-CN">杨桃蜜饯</span> in Chinese-speaking communities.</p>
+          <a class="about-link" href={githubUrl}>GitHub <span class="external-arrow" aria-hidden="true">↗</span></a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span class="footer-brand">Carambi</span>
+        <span class="footer-description">Independent guides &amp; reference projects</span>
+        <div class="footer-links">
+          <a href="/zh/" lang="zh-CN" class="zh-inline">中文</a>
+          <a href={githubUrl}>GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <span class="copyright">© 2026</span>
+      </footer>
+    </div>
   </body>
 </html>

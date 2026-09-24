@@ -1,6 +1,6 @@
 # Carambi local prototype
 
-Phase 1 contains only an Astro foundation and a temporary typography comparison at `/specimen/type/`. The root route is a local placeholder, not the production homepage. Remove the `specimen` route and its font files before a public release.
+The root route is the first English desktop homepage prototype. The temporary typography comparison remains at `/specimen/type/` for local review; remove the `specimen` route and its font files before a public release.
 
 Run `npm install`, then `npm run dev` for browser review or `npm run build` for a static build.
 
