@@ -1,0 +1,91 @@
+---
+import '@fontsource-variable/newsreader/standard.css';
+import '@fontsource-variable/source-sans-3/wght.css';
+import '../../styles/home.css';
+
+const githubUrl = 'https://github.com/yangtaomijian';
+
+const guides = [
+  {
+    number: '01',
+    title: 'Demons Within',
+    description: '双语玩家攻略',
+    coverage: 'Public 14.6',
+    href: 'https://yangtaomijian.github.io/demons-within-fvn-guide/',
+  },
+  {
+    number: '02',
+    title: 'Password',
+    description: '攻略与参考档案',
+    coverage: 'Build 0.85',
+    href: 'https://yangtaomijian.github.io/password-fvn-guide/',
+  },
+] as const;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carambi</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/zh/" lang="en">Carambi</a>
+        <nav aria-label="主导航">
+          <a href="#guides">攻略</a>
+          <a href="#about">关于</a>
+          <a href="/" lang="en">English</a>
+          <a href={githubUrl} lang="en">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="index-marker" aria-hidden="true"><span>INDEX</span></div>
+          <div class="hero-copy">
+            <h1 id="hero-title"><span>为兽人视觉小说及相关游戏整理的</span><span>攻略与参考项目</span></h1>
+            <p>独立整理、长期维护的文档与参考资料。</p>
+          </div>
+        </section>
+
+        <section class="guides-section" id="guides" aria-labelledby="guides-title">
+          <h2 class="section-label" id="guides-title">精选攻略</h2>
+          <div class="guide-list">
+            {guides.map((guide) => (
+              <a class="guide-row" href={guide.href}>
+                <span class="guide-number">{guide.number}</span>
+                <span class="guide-main">
+                  <span class="guide-title" lang="en">{guide.title}<span class="external-arrow" aria-hidden="true">↗</span></span>
+                  <span class="guide-description">{guide.description}</span>
+                </span>
+                <span class="guide-meta">
+                  <span lang="en">{guide.coverage}</span>
+                  <span>中文 · <span lang="en">English</span></span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="about-section" id="about" aria-labelledby="about-title">
+          <h2 id="about-title">关于</h2>
+          <p><span lang="en">Carambi</span> 是我在英文项目中使用的名字；在中文社区中，我也使用“杨桃蜜饯 / 杨桃”。</p>
+          <a class="about-link" href={githubUrl} lang="en">GitHub <span class="external-arrow" aria-hidden="true">↗</span></a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span class="footer-brand" lang="en">Carambi</span>
+        <span class="footer-description">独立攻略与参考项目</span>
+        <div class="footer-links">
+          <a href="/" lang="en">English</a>
+          <a href={githubUrl} lang="en">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <span class="copyright">© 2026</span>
+      </footer>
+    </div>
+  </body>
+</html>

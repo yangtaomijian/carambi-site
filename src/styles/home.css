@@ -305,3 +305,41 @@ a:focus-visible { outline: 2px solid var(--olive); outline-offset: 5px; }
   .guide-row,
   .external-arrow { transition: none; }
 }
+
+@font-face {
+  font-family: 'Carambi WenKai Subset';
+  src: url('/fonts/LXGWWenKai-Regular-subset.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+html[lang='zh-CN'] {
+  --editorial: 'Carambi WenKai Subset', 'Songti SC', 'STSong', 'Noto Serif CJK SC', serif;
+  --interface: var(--chinese);
+}
+
+html[lang='zh-CN'] .brand,
+html[lang='zh-CN'] .footer-brand,
+html[lang='zh-CN'] .guide-title {
+  font-family: 'Newsreader Variable', Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+html[lang='zh-CN'] .hero h1 { font-size: clamp(3.2rem, 4.55vw, 4.125rem); line-height: 1.28; letter-spacing: 0; }
+html[lang='zh-CN'] .hero p { font-size: 24px; line-height: 1.5; }
+html[lang='zh-CN'] .guide-description { font-family: var(--editorial); font-size: 18px; line-height: 1.5; }
+html[lang='zh-CN'] .about-section h2 { font-size: 47px; line-height: 1.25; }
+html[lang='zh-CN'] .about-section p { font-size: 24px; line-height: 1.65; text-wrap: balance; }
+
+@media (min-width: 681px) and (max-width: 1100px) {
+  html[lang='zh-CN'] .hero h1 { font-size: clamp(2.5rem, 4.4vw, 3.2rem); }
+}
+
+@media (max-width: 680px) {
+  html[lang='zh-CN'] .hero h1 { font-size: clamp(1.875rem, 8.2vw, 3rem); line-height: 1.37; text-wrap: balance; }
+  html[lang='zh-CN'] .hero p { font-size: 19px; line-height: 1.55; }
+  html[lang='zh-CN'] .guide-description { font-size: 17px; }
+  html[lang='zh-CN'] .about-section h2 { font-size: 37px; }
+  html[lang='zh-CN'] .about-section p { font-size: 18px; line-height: 1.7; }
+}
