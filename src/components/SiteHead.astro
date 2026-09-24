@@ -1,0 +1,48 @@
+---
+interface Props {
+  locale: 'en' | 'zh-CN';
+}
+
+const { locale } = Astro.props;
+const site = Astro.site;
+if (!site) throw new Error('Astro site origin is required for production metadata');
+
+const englishUrl = new URL('/', site).href;
+const chineseUrl = new URL('/zh/', site).href;
+const english = locale === 'en';
+const title = english ? 'Carambi — Guides & Reference Projects' : 'Carambi — 攻略与参考项目';
+const description = english
+  ? 'Independent guides and reference projects for furry visual novels and related games.'
+  : '为兽人视觉小说及相关游戏整理的独立攻略与参考项目。';
+const canonical = english ? englishUrl : chineseUrl;
+const image = new URL(english ? '/social/carambi-en.png' : '/social/carambi-zh.png', site).href;
+const imageAlt = english ? 'Carambi — Guides & reference projects' : 'Carambi — 攻略与参考项目';
+const ogLocale = english ? 'en_US' : 'zh_CN';
+const alternateLocale = english ? 'zh_CN' : 'en_US';
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="theme-color" content="#f5f2e9" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href={canonical} />
+<link rel="alternate" hreflang="en" href={englishUrl} />
+<link rel="alternate" hreflang="zh-Hans" href={chineseUrl} />
+<link rel="alternate" hreflang="x-default" href={englishUrl} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Carambi" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:locale:alternate" content={alternateLocale} />
+<meta property="og:image" content={image} />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={imageAlt} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:image:alt" content={imageAlt} />

@@ -1,7 +1,7 @@
 # Carambi Design Guide
 
-Version: 0.4
-Status: English responsive baseline accepted; Chinese edition in progress
+Version: 0.5
+Status: Bilingual visual baseline accepted; production hardening in progress
 Updated: 2026-09-25
 
 ## 1. Purpose and identity
@@ -146,6 +146,8 @@ rule       #ccc9bd
 
 Keep these values for v1. Typography and spacing carry the editorial character without additional accent colors.
 
+For small secondary text, use `#6d6b63`, a slightly darker shade of the accepted warm gray that reaches normal-text contrast on ivory. The underlying v1 palette and hierarchy remain unchanged.
+
 ---
 
 ### 4.2 Typography
@@ -193,7 +195,7 @@ It should remain neutral and subordinate to the editorial serif.
 
 #### Chinese editorial / content voice
 
-Use **LXGW WenKai Regular** for the Chinese Hero, Chinese project titles, Chinese About heading, and Chinese editorial/content copy. LXGW WenKai Screen is no longer a candidate.
+Use **LXGW WenKai Regular** for the Chinese Hero, Chinese project descriptions, Chinese About heading, and Chinese editorial/content copy. Official English game titles remain in Newsreader. LXGW WenKai Screen is no longer a candidate.
 
 #### Chinese interface / reference voice
 
@@ -205,7 +207,7 @@ Chinese text embedded in an English editorial context, such as `杨桃蜜饯`, s
 
 #### Production Chinese font delivery
 
-The full local LXGW WenKai TTF used in the Phase 1 specimen is a testing source, not a production delivery decision. Do not ship the full approximately 25 MB font file on the production Chinese page. Production Chinese webfont delivery and subsetting are part of the Chinese edition phase.
+The Chinese edition uses a small self-hosted WOFF2 subset of LXGW WenKai Regular. Its OFL notice remains with the font. The full source TTF is fetched and checksum-verified only when explicitly regenerating the subset; it is not a production or normal-build asset.
 
 #### General principle
 
@@ -587,7 +589,7 @@ Core responsive rule:
 
 The accepted English browser baselines are 1440 and 1280 px desktop, approximately 768 px tablet, approximately 390 px primary mobile, and 320 px narrow mobile. The current responsive behavior is accepted for v1. The existing 850 px and 680 px breakpoints are accepted unless Chinese content demonstrates a genuine locale-specific need.
 
-The current English implementation is the authority for desktop and tablet composition, mobile information hierarchy and Hero reflow, guide metadata reflow, footer reflow, visible navigation, and responsive breakpoints. Do not visually change it during Chinese implementation except for a genuinely necessary shared bug fix, documented and checked at desktop and mobile widths.
+The accepted English and Chinese browser implementations are the v1 visual baseline across desktop, tablet, and mobile. They govern composition, information hierarchy, Hero and metadata reflow, footer, visible navigation, and responsive breakpoints. Production work must not reopen the visual design except to fix a genuine bug, documented and checked in both editions.
 
 ---
 
@@ -656,7 +658,7 @@ The primary identity may simply be the word:
 
 Typography and the broader editorial system should carry most of the identity.
 
-A favicon may be designed separately later.
+The v1 favicon is a small, palette-based typographic C, not a formal logo.
 
 If an abstract identity mark is ever explored, it should be:
 
@@ -783,7 +785,7 @@ Do not attempt to finalize every design variable in one implementation pass.
 
 Completed. The browser specimen compared the English and Chinese candidates using real Carambi copy. Newsreader and LXGW WenKai Regular were selected for the editorial voices; Source Sans 3 and PingFang SC / system sans were selected for the interface voices.
 
-The specimen remains temporary and must not become part of the public site.
+The specimen has completed its purpose and is removed from the production source and build.
 
 ### Phase 2 — Desktop prototype
 
@@ -795,33 +797,19 @@ Completed and accepted. The English browser implementation at desktop, tablet, p
 
 ### Phase 4 — Bilingual refinement
 
-In progress. Apply the shared system to `/zh/`, establish a production-suitable Chinese font subset, and adjust Chinese typography independently where necessary.
+Completed and accepted. The English and Chinese browser implementations are the v1 visual baseline. The Chinese edition uses the shared design grammar with independently calibrated WenKai typography and a self-hosted subset.
 
 ### Phase 5 — Production details
 
-Only after visual approval, finalize:
+In progress. Phase 5A hardens the local static build: accessibility, metadata, language alternates, sitemap, crawler policy, font delivery, favicon, social previews, and 404. Phase 5B publication and domain configuration require separate review and authorization.
 
-- accessibility
-- metadata
-- canonical URLs
-- hreflang
-- sitemap
-- robots.txt
-- font loading
-- favicon
-- social preview
-- 404
-- GitHub Pages build and deployment
-- custom domain
+The v1 public pages are `/` and `/zh/` at the `https://carambi.com` domain root, with trailing slashes. Social previews use the accepted warm palette and typography. No new visual identity or homepage composition is introduced for production.
 
 ---
 
 ## 13. Current TBD items
 
-The remaining design decisions are:
-
-1. Chinese production typography calibration
-2. Chinese webfont delivery and subsetting
+The bilingual v1 visual system and Chinese webfont delivery are resolved. The Google-Extended crawler rule remains a separate publication-policy decision; no rule is added in Phase 5A.
 
 ---
 
@@ -829,7 +817,7 @@ The remaining design decisions are:
 
 The visual concept work has already converged.
 
-The accepted real browser implementation is the primary reference for exact English desktop, tablet, and mobile composition. The left-hand **A concept** in `references/carambi-homepage-v3.png` remains design provenance for the Pure Refined Editorial direction.
+The accepted real browser implementations are the primary references for English and Chinese desktop, tablet, and mobile composition. The left-hand **A concept** in `references/carambi-homepage-v3.png` remains design provenance for the Pure Refined Editorial direction.
 
 Use the neighboring concepts only selectively:
 

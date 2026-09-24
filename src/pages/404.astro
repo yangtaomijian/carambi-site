@@ -1,0 +1,39 @@
+---
+import '../styles/fonts.css';
+import '../styles/home.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#f5f2e9" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Page not found — Carambi</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/">Carambi</a>
+      </header>
+      <main class="not-found">
+        <h1>Page not found</h1>
+        <p>This page could not be found.</p>
+        <nav aria-label="Return to homepage">
+          <a href="/">Home</a>
+          <a href="/zh/" lang="zh-CN" class="zh-inline">中文首页</a>
+        </nav>
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  .not-found { min-height: min(70vh, 620px); padding: clamp(90px, 12vw, 160px) 0 100px; }
+  .not-found h1 { margin: 0; font-family: var(--editorial); font-optical-sizing: auto; font-size: clamp(44px, 5vw, 68px); font-weight: 400; line-height: 1.1; }
+  .not-found p { margin: 22px 0 0; color: var(--secondary-text); font-size: 20px; line-height: 1.45; }
+  .not-found nav { display: flex; flex-wrap: wrap; gap: 12px 30px; margin-top: 44px; }
+  .not-found nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--olive); text-underline-offset: 5px; }
+</style>

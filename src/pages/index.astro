@@ -1,6 +1,6 @@
 ---
-import '@fontsource-variable/newsreader/standard.css';
-import '@fontsource-variable/source-sans-3/wght.css';
+import SiteHead from '../components/SiteHead.astro';
+import '../styles/fonts.css';
 import '../styles/home.css';
 
 const githubUrl = 'https://github.com/yangtaomijian';
@@ -28,7 +28,7 @@ const guides = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Carambi</title>
+    <SiteHead locale="en" />
   </head>
   <body>
     <div class="page-shell">
