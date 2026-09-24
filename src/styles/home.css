@@ -270,19 +270,30 @@ a:focus-visible { outline: 2px solid var(--olive); outline-offset: 5px; }
 
 @media (max-width: 680px) {
   .page-shell { width: min(calc(100% - 40px), var(--content-width)); }
-  .site-header { display: block; padding: 27px 0 20px; }
-  .site-header nav { gap: 10px 22px; margin-top: 22px; }
-  .hero { padding: 68px 0 70px; }
-  .hero h1 { font-size: clamp(2.45rem, 9vw, 3.5rem); line-height: 1.09; }
-  .hero p { font-size: 21px; }
-  .guide-row { grid-template-columns: 42px minmax(0, 1fr); padding: 25px 0; }
-  .guide-number { font-size: 23px; }
+  .site-header { display: block; padding: 20px 0 15px; }
+  .brand,
+  .site-header nav a,
+  .footer-links a,
+  .about-link { display: inline-flex; align-items: center; min-height: 44px; }
+  .site-header nav { gap: 0 22px; margin-top: 8px; }
+  .hero { padding: 52px 0 54px; }
+  .hero h1 { font-size: clamp(1.875rem, 8.4vw, 3rem); line-height: 1.08; }
+  .hero h1 span { display: inline; }
+  .hero p { margin-top: 22px; font-size: 20px; line-height: 1.35; }
+  .guides-section { padding-top: 25px; }
+  .section-label { margin-bottom: 14px; }
+  .guide-row { grid-template-columns: 42px minmax(0, 1fr); padding: 22px 0; }
+  .guide-number { font-size: 22px; }
   .guide-main { padding: 0; border-left: 0; }
-  .guide-title { font-size: 31px; }
-  .guide-meta { grid-column: 2; padding-top: 11px; text-align: left; }
-  .about-section { padding: 61px 0 66px; }
-  .about-section h2 { font-size: 42px; }
-  .about-section p { font-size: 22px; }
+  .guide-title { font-size: 30px; }
+  .guide-description { margin-top: 5px; }
+  .guide-meta { display: flex; flex-wrap: wrap; grid-column: 2; column-gap: .35em; row-gap: 2px; padding-top: 8px; text-align: left; }
+  .guide-meta > span + span::before { content: '· '; }
+  .about-section { padding: 52px 0 56px; }
+  .about-section h2 { font-size: 38px; }
+  .about-section h2::after { margin-top: 12px; }
+  .about-section p { margin-top: 15px; font-size: 20px; line-height: 1.44; }
+  .about-link { margin-top: 17px; }
   .site-footer { grid-template-columns: 1fr auto; gap: 14px 20px; }
   .footer-description { grid-column: 1 / -1; grid-row: 2; }
   .footer-links { grid-column: 1; grid-row: 3; }

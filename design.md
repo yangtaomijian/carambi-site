@@ -1,7 +1,7 @@
 # Carambi Design Guide
 
-Version: 0.3
-Status: Desktop baseline accepted; mobile refinement in progress
+Version: 0.4
+Status: English responsive baseline accepted; Chinese edition in progress
 Updated: 2026-09-25
 
 ## 1. Purpose and identity
@@ -144,7 +144,7 @@ olive      #626949
 rule       #ccc9bd
 ```
 
-Keep these values during mobile refinement. Typography and spacing carry the editorial character without additional accent colors.
+Keep these values for v1. Typography and spacing carry the editorial character without additional accent colors.
 
 ---
 
@@ -205,7 +205,7 @@ Chinese text embedded in an English editorial context, such as `杨桃蜜饯`, s
 
 #### Production Chinese font delivery
 
-The full local LXGW WenKai TTF used in the Phase 1 specimen is a testing source, not a production delivery decision. Do not assume that the full approximately 25 MB font file should be shipped on the production site. Chinese webfont delivery and subsetting remain TBD for the bilingual phase.
+The full local LXGW WenKai TTF used in the Phase 1 specimen is a testing source, not a production delivery decision. Do not ship the full approximately 25 MB font file on the production Chinese page. Production Chinese webfont delivery and subsetting are part of the Chinese edition phase.
 
 #### General principle
 
@@ -292,7 +292,7 @@ Core rule:
 
 **The user should perceive warmth, not perceive “a paper texture.”**
 
-For v1, the warm ivory background is sufficient. Do not add further background effects during mobile refinement.
+For v1, the warm ivory background is sufficient. Do not add further background effects.
 
 Avoid:
 
@@ -585,12 +585,9 @@ Core responsive rule:
 
 **On mobile, preserve information hierarchy before preserving editorial ornament.**
 
-Initial prototype targets should include at least:
+The accepted English browser baselines are 1440 and 1280 px desktop, approximately 768 px tablet, approximately 390 px primary mobile, and 320 px narrow mobile. The current responsive behavior is accepted for v1. The existing 850 px and 680 px breakpoints are accepted unless Chinese content demonstrates a genuine locale-specific need.
 
-- approximately 1440 px desktop
-- approximately 390 px mobile
-
-Exact breakpoints are **TBD** and should be based on content behavior rather than arbitrary device categories.
+The current English implementation is the authority for desktop and tablet composition, mobile information hierarchy and Hero reflow, guide metadata reflow, footer reflow, visible navigation, and responsive breakpoints. Do not visually change it during Chinese implementation except for a genuinely necessary shared bug fix, documented and checked at desktop and mobile widths.
 
 ---
 
@@ -790,17 +787,15 @@ The specimen remains temporary and must not become part of the public site.
 
 ### Phase 2 — Desktop prototype
 
-Completed and accepted. The real browser implementation at approximately 1440 px is the v1 English desktop baseline for content width, Hero composition, guide rows, About, footer, palette, and INDEX treatment. Preserve it during mobile refinement.
+Completed and accepted. The real browser implementation at approximately 1440 px is the v1 English desktop baseline for content width, Hero composition, guide rows, About, footer, palette, and INDEX treatment.
 
 ### Phase 3 — Mobile
 
-In progress. Refine the approved desktop system for approximately 390 px.
-
-Do not merely compress the desktop grid.
+Completed and accepted. The English browser implementation at desktop, tablet, primary mobile, and narrow mobile widths is the v1 responsive baseline. Mobile preserves information hierarchy and allows the Hero and guide metadata to reflow naturally.
 
 ### Phase 4 — Bilingual refinement
 
-Apply the shared system to `/zh/` and adjust Chinese typography independently where necessary.
+In progress. Apply the shared system to `/zh/`, establish a production-suitable Chinese font subset, and adjust Chinese typography independently where necessary.
 
 ### Phase 5 — Production details
 
@@ -825,12 +820,8 @@ Only after visual approval, finalize:
 
 The remaining design decisions are:
 
-1. final mobile type scale
-2. final mobile line heights
-3. final mobile spacing rhythm
-4. responsive breakpoint calibration
-5. Chinese production typography calibration
-6. Chinese webfont delivery and subsetting
+1. Chinese production typography calibration
+2. Chinese webfont delivery and subsetting
 
 ---
 
@@ -838,7 +829,7 @@ The remaining design decisions are:
 
 The visual concept work has already converged.
 
-The accepted real browser implementation is the primary reference for exact English desktop composition. The left-hand **A concept** in `references/carambi-homepage-v3.png` remains design provenance for the Pure Refined Editorial direction.
+The accepted real browser implementation is the primary reference for exact English desktop, tablet, and mobile composition. The left-hand **A concept** in `references/carambi-homepage-v3.png` remains design provenance for the Pure Refined Editorial direction.
 
 Use the neighboring concepts only selectively:
 
