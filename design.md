@@ -1,7 +1,7 @@
 # Carambi Design Guide
 
 Version: 0.5
-Status: Bilingual visual baseline accepted; production hardening in progress
+Status: Bilingual v1 visual baseline accepted; production site live
 Updated: 2026-09-25
 
 ## 1. Purpose and identity
@@ -801,7 +801,7 @@ Completed and accepted. The English and Chinese browser implementations are the 
 
 ### Phase 5 — Production details
 
-In progress. Phase 5A hardens the local static build: accessibility, metadata, language alternates, sitemap, crawler policy, font delivery, favicon, social previews, and 404. Phase 5B publication and domain configuration require separate review and authorization.
+Completed. The bilingual static site is published at `https://carambi.com/` through GitHub Pages. The repository's Pages source is GitHub Actions, and its custom domain is configured in the Pages settings.
 
 The v1 public pages are `/` and `/zh/` at the `https://carambi.com` domain root, with trailing slashes. Social previews use the accepted warm palette and typography. No new visual identity or homepage composition is introduced for production.
 
