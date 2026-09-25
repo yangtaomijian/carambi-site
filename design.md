@@ -815,16 +815,9 @@ The bilingual v1 visual system and Chinese webfont delivery are resolved. The Go
 
 ## 14. Visual-reference authority
 
-The visual concept work has already converged.
+The accepted production browser implementations at `https://carambi.com/` and `https://carambi.com/zh/` are the visual authority for English and Chinese desktop, tablet, and mobile composition. Their restrained editorial structure, single desktop marginal INDEX / 索引 device, and plain ivory warmth define the current design.
 
-The accepted real browser implementations are the primary references for English and Chinese desktop, tablet, and mobile composition. The left-hand **A concept** in `references/carambi-homepage-v3.png` remains design provenance for the Pure Refined Editorial direction.
-
-Use the neighboring concepts only selectively:
-
-- archival/marginal concept: reference for one restrained marginal vertical device
-- material concept: provenance for the restrained warmth now carried by the plain ivory background
-
-Do not copy invented text, fake metadata, decorative imagery, or incidental image-generation artifacts from any concept image.
+Do not add invented text, fake metadata, or decorative imagery.
 
 The intended final mixture is approximately:
 
@@ -836,9 +829,7 @@ Subtle material refinement      ≈ 5%
 
 This ratio describes design influence, not measurable CSS values.
 
-If a generated visual reference conflicts with this document:
-
-**this document takes precedence.**
+Future visual references must follow this document and the accepted production browser implementation.
 
 ---
 
