@@ -21,6 +21,8 @@ const guides = [
     href: 'https://yangtaomijian.github.io/password-fvn-guide/',
   },
 ] as const;
+
+const guideCount = String(guides.length).padStart(2, '0');
 ---
 
 <!doctype html>
@@ -44,15 +46,18 @@ const guides = [
 
       <main>
         <section class="hero" aria-labelledby="hero-title">
-          <div class="index-marker" aria-hidden="true"><span>INDEX</span></div>
+          <div class="index-marker" aria-hidden="true"><span>索引</span></div>
           <div class="hero-copy">
-            <h1 id="hero-title"><span>为兽人视觉小说及相关游戏整理的</span><span>攻略与参考项目</span></h1>
+            <h1 id="hero-title"><span>为兽人视觉小说及相关游戏</span><span>整理的攻略与参考项目</span></h1>
             <p>独立整理、长期维护的文档与参考资料。</p>
           </div>
         </section>
 
         <section class="guides-section" id="guides" aria-labelledby="guides-title">
-          <h2 class="section-label" id="guides-title">精选攻略</h2>
+          <div class="guide-heading">
+            <h2 class="section-label" id="guides-title">精选攻略</h2>
+            <span class="guide-count" aria-hidden="true">{guideCount}</span>
+          </div>
           <div class="guide-list">
             {guides.map((guide) => (
               <a class="guide-row" href={guide.href}>
@@ -72,7 +77,7 @@ const guides = [
 
         <section class="about-section" id="about" aria-labelledby="about-title">
           <h2 id="about-title">关于</h2>
-          <p><span lang="en">Carambi</span> 是我在英文项目中使用的名字；在中文社区中，我也使用“杨桃蜜饯 / 杨桃”。</p>
+          <p><span class="editorial-latin-inline" lang="en">Carambi</span> 是我在英文环境中使用的名字。在中文社区，我以“杨桃蜜饯”为名，也常简称“杨桃”。</p>
           <a class="about-link" href={githubUrl} lang="en">GitHub <span class="external-arrow" aria-hidden="true">↗</span></a>
         </section>
       </main>

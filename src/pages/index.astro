@@ -21,6 +21,8 @@ const guides = [
     href: 'https://yangtaomijian.github.io/password-fvn-guide/en/',
   },
 ] as const;
+
+const guideCount = String(guides.length).padStart(2, '0');
 ---
 
 <!doctype html>
@@ -56,7 +58,10 @@ const guides = [
         </section>
 
         <section class="guides-section" id="guides" aria-labelledby="guides-title">
-          <h2 class="section-label" id="guides-title">SELECTED GUIDES</h2>
+          <div class="guide-heading">
+            <h2 class="section-label" id="guides-title">SELECTED GUIDES</h2>
+            <span class="guide-count" aria-hidden="true">{guideCount}</span>
+          </div>
           <div class="guide-list">
             {guides.map((guide) => (
               <a class="guide-row" href={guide.href}>
@@ -76,7 +81,7 @@ const guides = [
 
         <section class="about-section" id="about" aria-labelledby="about-title">
           <h2 id="about-title">About</h2>
-          <p>Carambi is the name I use for English-language projects. Also known as <span class="zh-inline" lang="zh-CN">杨桃蜜饯</span> in Chinese-speaking communities.</p>
+          <p>Carambi is the name I use for my English-language work. In Chinese-speaking communities, I’m known as <span class="editorial-zh-inline" lang="zh-CN">杨桃蜜饯</span>, or simply <span class="editorial-zh-inline" lang="zh-CN">杨桃</span>.</p>
           <a class="about-link" href={githubUrl}>GitHub <span class="external-arrow" aria-hidden="true">↗</span></a>
         </section>
       </main>
