@@ -1,5 +1,6 @@
 ---
 import SiteHead from '../../components/SiteHead.astro';
+import ExternalArrow from '../../components/ExternalArrow.astro';
 import '../../styles/fonts.css';
 import '../../styles/home.css';
 
@@ -40,7 +41,7 @@ const guideCount = String(guides.length).padStart(2, '0');
           <a href="#guides">攻略</a>
           <a href="#about">关于</a>
           <a href="/" lang="en">English</a>
-          <a href={githubUrl} lang="en">GitHub <span aria-hidden="true">↗</span></a>
+          <a href={githubUrl} lang="en">GitHub<ExternalArrow /></a>
         </nav>
       </header>
 
@@ -63,7 +64,7 @@ const guideCount = String(guides.length).padStart(2, '0');
               <a class="guide-row" href={guide.href}>
                 <span class="guide-number">{guide.number}</span>
                 <span class="guide-main">
-                  <span class="guide-title" lang="en">{guide.title}<span class="external-arrow" aria-hidden="true">↗</span></span>
+                  <span class="guide-title" lang="en">{guide.title}<ExternalArrow /></span>
                   <span class="guide-description">{guide.description}</span>
                 </span>
                 <span class="guide-meta">
@@ -78,7 +79,7 @@ const guideCount = String(guides.length).padStart(2, '0');
         <section class="about-section" id="about" aria-labelledby="about-title">
           <h2 id="about-title">关于</h2>
           <p><span class="editorial-latin-inline" lang="en">Carambi</span> 是我在英文环境中使用的名字。在中文社区，我以“杨桃蜜饯”为名，也常简称“杨桃”。</p>
-          <a class="about-link" href={githubUrl} lang="en">GitHub <span class="external-arrow" aria-hidden="true">↗</span></a>
+          <a class="about-link" href={githubUrl} lang="en">GitHub<ExternalArrow /></a>
         </section>
       </main>
 
@@ -87,7 +88,7 @@ const guideCount = String(guides.length).padStart(2, '0');
         <span class="footer-description">独立攻略与参考项目</span>
         <div class="footer-links">
           <a href="/" lang="en">English</a>
-          <a href={githubUrl} lang="en">GitHub <span aria-hidden="true">↗</span></a>
+          <a href={githubUrl} lang="en">GitHub<ExternalArrow /></a>
         </div>
         <span class="copyright">© 2026</span>
       </footer>

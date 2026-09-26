@@ -195,13 +195,22 @@ a:focus-visible { outline: 2px solid var(--olive); outline-offset: 5px; }
 
 .external-arrow {
   display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
   margin-left: 17px;
   color: var(--olive);
-  font-family: var(--interface);
   font-size: .62em;
-  font-weight: 400;
-  vertical-align: .18em;
+  vertical-align: -.04em;
   transition: transform 160ms ease;
+}
+
+.site-header nav a .external-arrow,
+.footer-links a .external-arrow {
+  margin-left: .35em;
+  color: inherit;
+  font-size: 1em;
+  vertical-align: -.12em;
 }
 
 .guide-row:hover .external-arrow,
@@ -264,7 +273,7 @@ a:focus-visible { outline: 2px solid var(--olive); outline-offset: 5px; }
 }
 
 .about-link:hover { color: var(--charcoal); }
-.about-link .external-arrow { margin-left: 8px; font-size: .95em; vertical-align: 0; }
+.about-link .external-arrow { margin-left: 8px; font-size: .95em; vertical-align: -.12em; }
 
 .site-footer {
   display: grid;

@@ -1,5 +1,6 @@
 ---
 import SiteHead from '../components/SiteHead.astro';
+import ExternalArrow from '../components/ExternalArrow.astro';
 import '../styles/fonts.css';
 import '../styles/home.css';
 
@@ -40,7 +41,7 @@ const guideCount = String(guides.length).padStart(2, '0');
           <a href="#guides">Guides</a>
           <a href="#about">About</a>
           <a href="/zh/" lang="zh-CN" class="zh-inline">中文</a>
-          <a href={githubUrl}>GitHub <span aria-hidden="true">↗</span></a>
+          <a href={githubUrl}>GitHub<ExternalArrow /></a>
         </nav>
       </header>
 
@@ -67,7 +68,7 @@ const guideCount = String(guides.length).padStart(2, '0');
               <a class="guide-row" href={guide.href}>
                 <span class="guide-number">{guide.number}</span>
                 <span class="guide-main">
-                  <span class="guide-title">{guide.title}<span class="external-arrow" aria-hidden="true">↗</span></span>
+                  <span class="guide-title">{guide.title}<ExternalArrow /></span>
                   <span class="guide-description">{guide.description}</span>
                 </span>
                 <span class="guide-meta">
@@ -82,7 +83,7 @@ const guideCount = String(guides.length).padStart(2, '0');
         <section class="about-section" id="about" aria-labelledby="about-title">
           <h2 id="about-title">About</h2>
           <p>Carambi is the name I use for my English-language work. In Chinese-speaking communities, I’m known as <span class="editorial-zh-inline" lang="zh-CN">杨桃蜜饯</span>, or simply <span class="editorial-zh-inline" lang="zh-CN">杨桃</span>.</p>
-          <a class="about-link" href={githubUrl}>GitHub <span class="external-arrow" aria-hidden="true">↗</span></a>
+          <a class="about-link" href={githubUrl}>GitHub<ExternalArrow /></a>
         </section>
       </main>
 
@@ -91,7 +92,7 @@ const guideCount = String(guides.length).padStart(2, '0');
         <span class="footer-description">Independent guides &amp; reference projects</span>
         <div class="footer-links">
           <a href="/zh/" lang="zh-CN" class="zh-inline">中文</a>
-          <a href={githubUrl}>GitHub <span aria-hidden="true">↗</span></a>
+          <a href={githubUrl}>GitHub<ExternalArrow /></a>
         </div>
         <span class="copyright">© 2026</span>
       </footer>
