@@ -43,6 +43,16 @@ const guides = [
     coverage: '1.3.0',
     href: 'https://jurodo.carambi.com/',
   },
+  {
+    number: '05',
+    title: '我的艾瑟瑞尔时光',
+    locale: 'zh-CN',
+    bilingual: true,
+    description: '主线、支线与装备攻略',
+    coverage: '全汉化版',
+    coverageLocale: 'zh-CN',
+    href: 'https://etheria.carambi.com/',
+  },
 ] as const;
 
 const guideCount = String(guides.length).padStart(2, '0');
@@ -90,7 +100,7 @@ const guideCount = String(guides.length).padStart(2, '0');
                   <span class="guide-description">{guide.description}</span>
                 </span>
                 <span class="guide-meta">
-                  <span lang="en">{guide.coverage}</span>
+                  <span lang={'coverageLocale' in guide ? guide.coverageLocale : 'en'}>{guide.coverage}</span>
                   <span>中文{guide.bilingual && <> · <span lang="en">English</span></>}</span>
                 </span>
               </a>
